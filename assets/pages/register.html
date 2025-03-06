@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footcap - Register</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml">
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body class="auth-body">
+    <div class="particles-container" id="particles-js"></div>
+    <div class="auth-container">
+        <div class="auth-form-container">
+            <div class="form-header">
+               
+                <h1 class="glow-text">Create Account</h1>
+            </div>
+            <form id="registerForm" class="auth-form">
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Full Name</label>
+                    <i class="fas fa-user"></i>
+                    <div class="input-bar"></div>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="email" required>
+                    <label for="email">Email</label>
+                    <i class="fas fa-envelope"></i>
+                    <div class="input-bar"></div>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <i class="fas fa-lock"></i>
+                    <div class="input-bar"></div>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <i class="fas fa-lock"></i>
+                    <div class="input-bar"></div>
+                </div>
+                <div class="form-footer">
+                    <div class="terms">
+                        <input type="checkbox" id="terms" class="custom-checkbox" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                </div>
+                <button type="button" onclick="imanKhar()" class="btn btn-primary">
+                    <span class="btn-text">Register</span>
+                    <i class="fas fa-user-plus"></i>
+                </button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+        <div class="auth-image">
+            <div class="image-overlay"></div>
+            <div class="floating-shapes"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../../assets/js/role.js"></script>
+</body>
+</html>

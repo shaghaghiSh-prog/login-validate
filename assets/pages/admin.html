@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footcap - Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - preload banner
+  -->
+    <link rel="preload" href="./assets/images/hero-banner.png" as="image" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-container">
+      <nav class="admin-sidebar">
+        <div class="sidebar-header">
+         
+          <h2 class="glow-text">Footcap</h2>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a href="#dashboard"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#products"><i class="fas fa-box-open"></i> Products</a>
+          </li>
+          <li>
+            <a href="#orders"><i class="fas fa-shopping-cart"></i> Orders</a>
+          </li>
+          <li>
+            <a href="#customers"><i class="fas fa-users"></i> Customers</a>
+          </li>
+          <li>
+            <a href="#analytics"><i class="fas fa-chart-line"></i> Analytics</a>
+          </li>
+          <li>
+            <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="admin-main">
+        <header class="admin-header">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+            <i class="fas fa-search"></i>
+          </div>
+         
+        </header>
+        <div class="dashboard-content">
+          <h1 class="dashboard-title glow-text">
+            <span id="Admin-name-top"></span>`s Dashboard Overview
+          </h1>
+          <div class="dashboard-cards">
+            <div class="dashboard-card">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+              <div class="card-info">
+                <h3>Total Sales</h3>
+                <p class="card-value">$24,500</p>
+                <p class="card-change positive">
+                  +15% <i class="fas fa-arrow-up"></i>
+                </p>
+              </div>
+            </div>
+            <div class="dashboard-card">
+              <div class="card-icon"><i class="fas fa-users"></i></div>
+              <div class="card-info">
+                <h3>New Customers</h3>
+                <p class="card-value">145</p>
+                <p class="card-change positive">
+                  +22% <i class="fas fa-arrow-up"></i>
+                </p>
+              </div>
+            </div>
+            <div class="dashboard-card">
+              <div class="card-icon"><i class="fas fa-box"></i></div>
+              <div class="card-info">
+                <h3>Total Products</h3>
+                <p class="card-value">1,250</p>
+                <p class="card-change negative">
+                  -3% <i class="fas fa-arrow-down"></i>
+                </p>
+              </div>
+            </div>
+            <div class="dashboard-card">
+              <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+              <div class="card-info">
+                <h3>Revenue</h3>
+                <p class="card-value">$18,260</p>
+                <p class="card-change positive">
+                  +10% <i class="fas fa-arrow-up"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-charts">
+            <div class="chart-container">
+              <h2>Sales Overview</h2>
+              <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart-container">
+              <h2>Top Products</h2>
+              <canvas id="productsChart"></canvas>
+            </div>
+          </div>
+          <div class="recent-orders">
+            <h2>Recent Orders</h2>
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Product</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#ORD-001</td>
+                  <td>John Doe</td>
+                  <td>Running Shoes</td>
+                  <td>$120.00</td>
+                  <td><span class="status-badge completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>#ORD-002</td>
+                  <td>Jane Smith</td>
+                  <td>Hiking Boots</td>
+                  <td>$180.00</td>
+                  <td>
+                    <span class="status-badge processing">Processing</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#ORD-003</td>
+                  <td>Bob Johnson</td>
+                  <td>Sports Socks</td>
+                  <td>$25.00</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

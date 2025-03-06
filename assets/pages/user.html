@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footcap - User Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script
+    src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml">
+  <!-- 
+  - google font link
+-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+    
+
+<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+
+
+<!-- 
+  - google font link
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+  rel="stylesheet">
+
+<!-- 
+  - preload banner
+-->
+<link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="dashboard-menu">
+            <div class="menu-header">
+                <h2>Footcap</h2>
+            </div>
+            <ul class="menu-items">
+                <li class="active"><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#orders"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+                <li><a href="#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <div class="menu-footer">
+                <img src="https://i.pravatar.cc/150?img=32" alt="User Avatar" class="user-avatar">
+                <div class="user-info">
+                    <h3 id="user-name-top">John Doe</h3>
+                    <p>Premium Member</p>
+                </div>
+            </div>
+        </nav>
+        <main class="dashboard-content">
+            <header class="content-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+            </header>
+            <div class="content-body">
+                <h1 class="dashboard-title">Welcome back , <span id="user-name-down"></span> </h1>
+                <div class="stats-overview">
+                    <div class="stat-card">
+                        <i class="fas fa-box"></i>
+                        <div class="stat-info">
+                            <h3>Total Orders</h3>
+                            <p>12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <div class="stat-info">
+                            <h3>Wishlist Items</h3>
+                            <p>8</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-medal"></i>
+                        <div class="stat-info">
+                            <h3>Loyalty Points</h3>
+                            <p>350</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-sections">
+                    <div class="section recent-orders">
+                        <h2>Recent Orders</h2>
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Product</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-001</td>
+                                    <td>Running Shoes</td>
+                                    <td>May 15, 2023</td>
+                                    <td>$120.00</td>
+                                    <td><span class="status-badge completed">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-002</td>
+                                    <td>Hiking Boots</td>
+                                    <td>June 2, 2023</td>
+                                    <td>$180.00</td>
+                                    <td><span class="status-badge processing">In Transit</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-003</td>
+                                    <td>Sports Socks</td>
+                                    <td>June 10, 2023</td>
+                                    <td>$25.00</td>
+                                    <td><span class="status-badge pending">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="section favorite-products">
+                        <h2>Favorite Products</h2>
+                        <div class="product-grid">
+                            <div class="product-item">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Product 1">
+                                <h3>Red Running Shoes</h3>
+                                <p>$89.99</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item">
+                                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5" alt="Product 2">
+                                <h3>Hiking Boots</h3>
+                                <p>$129.99</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Product 3">
+                                <h3>White Sneakers</h3>
+                                <p>$79.99</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                            <div class="product-item">
+                                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa" alt="Product 4">
+                                <h3>Green Running Shoes</h3>
+                                <p>$94.99</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/user.js"></script>
+</body>
+</html>
